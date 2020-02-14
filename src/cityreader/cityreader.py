@@ -37,8 +37,8 @@ def cityreader(cities=[]):
         next(file)
         for row in file:
             name = row[0]
-            lat = row[3]
-            lon = row[4]
+            lat = float(row[3])
+            lon = float(row[4])
             city = City(name, lat, lon)
             cities.append(city)
 
