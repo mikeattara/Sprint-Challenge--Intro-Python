@@ -83,6 +83,14 @@ for c in cities:
 # TODO Get latitude and longitude values from the user
 
 
+def parse(string):
+    return string.split(',')
+
+
+lat1, lon1 = parse(input('Enter lat1,lon1: '))
+lat2, lon2 = parse(input('Enter lat2,lon2: '))
+
+
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     # within will hold the cities that fall within the specified region
     within = []
@@ -103,12 +111,4 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
         return 'Invalid inputs!'
 
 
-def parse(string):
-    return string.split(',')
-
-
-lat1, lon1 = parse(input('Enter lat1,lon1: '))
-lat2, lon2 = parse(input('Enter lat2,lon2: '))
-
-for city in cityreader_stretch(lat1, lon1, lat2, lon2, cities=cities):
-    print(city)
+cityreader_stretch(lat1, lon1, lat2, lon2, cities=cities)
