@@ -111,4 +111,4 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
         return 'Invalid inputs!'
 
 
-cityreader_stretch(lat1, lon1, lat2, lon2, cities=cities)
+cityreader_stretch(lat1, lon1, lat2, lon2, cities)
